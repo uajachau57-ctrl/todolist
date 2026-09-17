@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="todolist.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="top-cards">
+            <div class="card balance-card">
+                <div class="card-header">
+                    <h3>Total Balance</h3>
+                    <i class="fa-solid fa-wallet card-icon"></i>
+                </div>
+                <h1 id="totalBalance">$ 0.00</h1>
+                <p>Income - Expense</p>
+            </div>
+            <div class="card income-card">
+                <div class="card-header">
+                    <h3>Total Income</h3>
+                    <i class="fa-solid fa-arrow-trend-up card-icon"></i>
+                </div>
+                <h1 id="totalIncome">$ 0.00</h1>
+                <p>This Month ⬆</p>
+            </div>
+            <div class="card expense-card">
+                <div class="card-header">
+                    <h3>Total Expense</h3>
+                    <i class="fa-solid fa-arrow-down card-icon"></i>
+                </div>
+                <h1 id="totalExpense">$ 0.00</h1>
+                <p>This Month ⬇</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="form-container">
+                <h2>Add Transaction</h2>
+                <form id="transactionForm">
+                    <div class="input-group">
+                        <label>Description</label>
+                        <div class="input-wrapper">
+                            <i class="fa-regular fa-file-lines input-icon"></i>
+                            <input type="text" id="description" placeholder="Enter description">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Amount</label>
+                        <div class="input-wrapper">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                            <input type="number" id="amount" placeholder="Enter amount">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Date</label>
+                        <div class="input-wrapper">
+                            <input type="date" id="date">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Type</label>
+                        <div class="input-wrapper">
+                            <select id="type">
+                                <option value="selecter">Selecter</option>
+                                <option value="income">Income</option>
+                                <option value="expense">Expense</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn"><i class="fa-solid fa-square-plus"></i> Add transaction</button>
+                </form>
+            </div>
+
+            <div class="list-container">
+                <div class="search-bar">
+                <h2>Transactions</h2>
+                <input type="text" id="searchInput" placeholder="search Transactions">
+                <select class="input-all">
+                    <option value="All">All</option>
+                </select>
+                </div>
+                <div class="table-responsive">
+                    <table>
+                        <tr>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                        <tbody id="transactionList">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <footer>
+        <p>© 2026 Expense Tracker. All rights reserved.</p>
+    </footer>
+
+    <script src="todolist.js"></script>
+</body>
+</html>
